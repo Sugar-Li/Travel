@@ -44,7 +44,7 @@
     overflow: hidden
     width: 100%
     height:0
-    padding-bottom:28%
+    padding-bottom:26.67%
     background: #ccc
     .swiper-img
       width: 100%
