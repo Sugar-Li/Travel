@@ -9,7 +9,7 @@
         <swiper :options="swiperOption">
           <swiper-slide v-for="(page,index) in pages" :key="index">
             <div class="item" v-for="item in page" :key="item.id">
-              <img class="item-img-url" :src="item.imgUrl" alt="">
+              <img class="item-img-url" :src="item.imageUrl" alt="">
               <p class="item-title">{{item.title}}</p>
               <div class="item-cost">￥<p class="item-cost-number">{{item.cost}}</p>起</div>
             </div>
@@ -28,39 +28,10 @@
             pagination:'.swiper-pagination',
             loop:true
           },
-          hotList:[
-            {
-              id:'0001',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg',
-              title:'南京总统府1',
-              cost:38
-            },
-            {
-              id:'0002',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg',
-              title:'南京总统府2',
-              cost:38
-            },
-            {
-              id:'0003',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg',
-              title:'南京总统府3',
-              cost:38
-            },
-            {
-              id:'0004',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg',
-              title:'南京总统府4',
-              cost:38
-            },
-            {
-              id:'0005',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg',
-              title:'南京总统府5',
-              cost:38
-            },
-          ]
         }
+      },
+      props:{
+        hotList:Array
       },
       computed:{
         pages(){

@@ -3,7 +3,7 @@
   <div class="wrapper">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(item,index) in swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.imgUrl" alt="">
+        <img class="swiper-img" :src="item.imageUrl" alt="">
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -20,17 +20,10 @@
             pagination:'.swiper-pagination',
             loop:true
           },
-          swiperList:[
-            {
-              id:'0001',
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1808/ab/93de82ea87ff4702.jpg_750x200_83a25e9d.jpg"
-            },
-            {
-              id:'0002',
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1808/46/ad623dcbd4663f02.jpg_750x200_7f58a60e.jpg"
-            }
-          ]
         }
+      },
+      props:{
+        swiperList:Array
       }
     }
 </script>

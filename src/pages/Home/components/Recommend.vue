@@ -8,12 +8,12 @@
     <ul>
       <li class="item border-bottom" v-for="(recommend,index) in recommendList" :key="recommend.id">
         <img class="item-img"
-             :src="recommend.imgUrl" alt="">
+             :src="recommend.imageUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{recommend.info.title}}</p>
           <div class="item-score">
-            <Stars class="item-score-star" :score="5"/>
-            <p class="item-score-comment">111条评论</p>
+            <Stars class="item-score-star" :score="recommend.info.score"/>
+            <p class="item-score-comment">{{recommend.info.account}}条评论</p>
           </div>
           <div class="item-cost-addr">
             <div class="item-cost">￥<p class="item-cost-number">{{recommend.info.cost}}</p>起</div>
@@ -32,38 +32,8 @@
   import Stars from './Stars/Stars.vue'
 
   export default {
-    data(){
-      return{
-        recommendList:[
-          {
-            id:'0001',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-            info:{
-              title:'上海迪士尼乐园',
-              cost:95,
-              addr:'浦东新区'
-            }
-          },
-          {
-            id:'0002',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-            info:{
-              title:'上海迪士尼乐园',
-              cost:95,
-              addr:'浦东新区'
-            }
-          },
-          {
-            id:'0003',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-            info:{
-              title:'上海迪士尼乐园',
-              cost:95,
-              addr:'浦东新区'
-            }
-          }
-        ]
-      }
+    props:{
+      recommendList:Array
     },
     components: {
       Stars
