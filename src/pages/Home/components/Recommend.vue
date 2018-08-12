@@ -2,7 +2,7 @@
   <div>
     <div class="title">
       <img class="title-avatar" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="">
-      猜你喜欢
+     <p class="title-content">猜你喜欢</p>
     </div>
 
     <ul>
@@ -77,11 +77,16 @@
     line-height: .8rem
     background: #eee
     text-indent: .2rem
+    display flex
+    align-items center
     .title-avatar
       height: .28rem
       width: .28rem
       line-height: .28rem
       height: .28rem
+      margin-left:.1rem
+    .title-content
+      font-size:.32rem
 
   .item
     display: flex

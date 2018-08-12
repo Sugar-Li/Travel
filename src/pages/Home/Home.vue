@@ -3,6 +3,7 @@
       <Header/>
       <Swiper/>
       <Icon/>
+      <Hot/>
       <Recommend/>
 
     </div>
@@ -13,11 +14,13 @@
   import Swiper from './components/Swiper'
   import Icon from './components/Icon'
   import Recommend from './components/Recommend'
+  import Hot from './components/Hot'
     export default {
       components:{
         Header,
         Swiper,
         Icon,
+        Hot,
         Recommend
       }
     }
