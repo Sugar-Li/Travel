@@ -73,7 +73,6 @@
             imageUrl:'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
             content:'牛首山'
           },
-
         ]
       }
     },
@@ -106,6 +105,7 @@
     overflow: hidden
     height: 0
     padding-bottom: 50%
+    margin-top  : .1rem
     .icon
       position: relative;
       overflow: hidden;
@@ -125,7 +125,6 @@
           display: block
           margin: 0 auto
           height: 100%
-
       .icon-content
         position: absolute
         bottom:0
