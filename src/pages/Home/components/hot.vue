@@ -83,6 +83,7 @@
         margin-top .2rem
       .item-title
         margin:.1rem
+        font-size:.24rem
       .item-cost
         display: flex
         align-items center
