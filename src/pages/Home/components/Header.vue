@@ -7,17 +7,19 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{city}}
-      <span class="iconfont arrow-icon">&#xe615;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <span class="iconfont arrow-icon">&#xe615;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
   export default {
-    props:{
-      city:String
+    props: {
+      city: String
     }
   }
 </script>
@@ -27,15 +29,15 @@
 
   .header
     display: flex
-    line-height: .86rem
+    line-height:$headerHeight
     background-color: $bgColor;
     color: #fff;
     .header-left
       width: .64rem
       float: left
       .back-icon
-        text-align:center
-        font-size:.4rem
+        text-align: center
+        font-size: .4rem
 
     .header-input
       flex: 1
@@ -44,12 +46,13 @@
       margin: .12rem 0 0 .2rem
       background: #ffffff
       border-radius .1rem
-      padding-left:.2rem
+      padding-left: .2rem
       color: #ccc;
     .header-right
+      color: #fff
       width 1.24rem
       float: right
       text-align: center
       .arrow-icon
-        font-size:.2rem
+        font-size: .2rem
 </style>
