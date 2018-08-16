@@ -1,15 +1,18 @@
 <template>
   <div>
-    <City_Hearder/>
+    <Hearder/>
+    <Search/>
   </div>
 </template>
 
 <script>
-  import City_Hearder from './components/Header.vue'
+  import Hearder from './components/Header.vue'
+  import Search from './components/Search.vue'
 
   export default {
     components: {
-      City_Hearder
+      Hearder,
+      Search
     }
   }
 </script>

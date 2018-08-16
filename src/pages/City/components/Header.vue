@@ -1,6 +1,6 @@
 <template>
 
-    <div class="city-header">
+    <div class="header">
       城市选择
       <router-link to="/">
       <div class="iconfont city-back">&#xe624;</div>
@@ -17,7 +17,7 @@
 
   @import "~css/variables.styl"
 
-  .city-header
+  .header
     position: relative;
     overflow: hidden
     height:$headerHeight
