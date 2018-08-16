@@ -41,7 +41,7 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .title
     margin-top: .2rem
     line-height: .8rem

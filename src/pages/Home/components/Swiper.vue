@@ -29,7 +29,7 @@
     }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus" scoped scoped>
   /*由于.swiper-pagination-bullet-active的样式是作用在它的父组件上的，而我们这里限制了只修饰当前组件
   为了能实现功能,`>>>`的方式，表示在 .wrapper下只要存在子组件的类名，即可渲染*/
   .wrapper  >>> .swiper-pagination-bullet-active
