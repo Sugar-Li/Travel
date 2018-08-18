@@ -9,57 +9,21 @@
           </div>
         </div>
       </Section>
+      <!--热门城市-->
       <Section class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </Section>
-      <Section class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-        </div>
-      </Section>
-      <Section class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-        </div>
-      </Section>
-      <Section class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
-          <div class="item border-bottom">安倍额</div>
+
+      <!--按字母确定城市排序-->
+      <Section class="area" v-for="(items,key) in cities" :key="key">
+        <div class="title border-topbottom">{{key}}</div>
+        <div class="item-list" v-for="item in items" :key="item.id">
+          <div class="item border-bottom">{{item.name}}</div>
         </div>
       </Section>
 
@@ -71,6 +35,10 @@
 <script>
   import BScroll from 'better-scroll'
   export default {
+    props:{
+      hotCities:Array,
+      cities:Object
+    },
     mounted(){
       this.scroll=new BScroll(this.$refs.wrapper)
     }

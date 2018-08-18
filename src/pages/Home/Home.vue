@@ -42,7 +42,7 @@
         },
         getHomeInfoSucc(res){
           res=res.data
-          if (res.node===0&& res.data) {
+          if (res.ret&& res.data) {
             const data=res.data
             this.city=data.city
             this.swiperList=data.swiperList
