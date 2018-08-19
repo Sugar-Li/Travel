@@ -20,7 +20,11 @@
       </Section>
 
       <!--按字母确定城市排序-->
-      <Section class="area" v-for="(items,key) in cities" :key="key">
+      <Section class="area"
+               v-for="(items,key) in cities"
+               :key="key"
+               :ref="key"
+      >
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list" v-for="item in items" :key="item.id">
           <div class="item border-bottom">{{item.name}}</div>
@@ -37,10 +41,21 @@
   export default {
     props:{
       hotCities:Array,
-      cities:Object
+      cities:Object,
+      letter:String
     },
     mounted(){
       this.scroll=new BScroll(this.$refs.wrapper)
+    },
+    watch:{
+      letter(){
+        if (this.letter){
+          const element=this.$refs[this.letter][0]
+          this.scroll.scrollToElement(element)
+
+        }
+
+      }
     }
   }
 </script>

@@ -2,8 +2,10 @@
   <div>
     <Hearder/>
     <Search/>
-    <List :cities="cities" :hotCities="hotCities"/>
-    <Alphabet :cities="cities"/>
+    <List :cities="cities" :hotCities="hotCities" :letter="letter"/>
+    <Alphabet :cities="cities"
+    @change="handleLetterChange"
+    />
   </div>
 </template>
 
@@ -24,7 +26,8 @@
     data(){
       return{
         hotCities:[],
-        cities:{}
+        cities:{},
+        letter:''
       }
     },
     methods:{
@@ -38,10 +41,11 @@
           this.city=data.city
           this.hotCities=data.hotCities
           this.cities=data.cities
-
-
         }
       },
+      handleLetterChange(e){
+        this.letter=e
+      }
 
       // ...mapActions(['getHomeInfo'])
     },
